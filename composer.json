@@ -1,6 +1,6 @@
 {
     "name": "calendarific/php-calendarific",
-    "description": "PHP library for CalendarIndex.com",
+    "description": "PHP library for Calendarific.com",
     "version": "1.0.0",
     "type": "library",
     "keywords": [ "holiday", "holidays", "calendarindex", "date", "calendar", "calendarific"],
