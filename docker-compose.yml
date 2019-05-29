@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+
+  ##
+  # Command: `docker-compose -f ./docker-compose.yml run --rm cli [...]`
+  ##
+  cli:
+    container_name: calendarific-cli
+    build: ./server/docker/php/cli
+    restart: "no"
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    environment:
+      - COMPOSER_ALLOW_SUPERUSER=1
