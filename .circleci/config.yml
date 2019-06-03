@@ -1,0 +1,25 @@
+version: 2
+jobs:
+
+  php:
+    docker:
+      - image: circleci/php:7.0
+    working_directory: ~/site
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.json" }}
+            - composer-v1-
+      - run: composer install -n --prefer-dist --ignore-platform-reqs
+      - save_cache:
+          key: composer-v1-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+      - run: ./vendor/bin/phpunit -c phpunit.xml.dist
+
+workflows:
+  version: 2
+  suite:
+    jobs:
+      - php
