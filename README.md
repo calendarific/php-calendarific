@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/calendarific/php-calendarific.svg?style=svg)](https://circleci.com/gh/calendarific/php-calendarific)
+
 Calendarific
 -------
 
