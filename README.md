@@ -12,7 +12,7 @@ Installation
 This package can be installed via [Composer](https://getcomposer.org):
 
 ```shell
-$ composer require calendarific/calendarific
+$ composer require calendarific/php-calendarific
 ```
 
 It requires **PHP >= 7.0.0**.
